@@ -1,0 +1,74 @@
+.text-col
+{
+    color:blue;
+}
+.text-green
+{
+    color:green;
+}
+.text-red
+{
+    color:red;
+}
+#name_style
+{
+    color: powderblue;
+    font-size: 100px;
+}
+.container
+{
+    background-color: blueviolet;
+    min-height: 500px;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+}
+.form-head
+{
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.input-section
+{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    padding-top: 10px;
+}
+.input-section input,textarea
+{
+    margin-top: 10px;
+}
+textarea
+{
+min-height: 100px;
+}
+.btn-class
+{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-class input
+{
+    min-height: 36px;
+    min-width: 125px;
+    border-radius: 5px;
+}
+.btn-class input:hover
+{
+    background-color: aqua;
+    color: white;
+    font-weight: bold;
+}
+.submit-form input
+{
+    background-color: cornflowerblue;
+    display: flex;
+    width: 200px;
+    
+}
