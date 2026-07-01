@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Registration form</h2>
+    <form id = "myform" onsubmit="return validateForm()">
+
+        <label for="">Name: </label>
+        <input type="text" name="" id="name">
+        <div class = "error" id = "nameError"></div>
+
+        <label>Email:</label>
+        <input type="text" id ="email">
+        <div class="error" id="emailError"></div>
+
+        <label for="">Password</label>
+        <input type="password" id="password">
+        <div class="error" id="passError"></div>
+
+        <label for="">Confirm password:</label>
+        <input type="password" id="confirmpassword">
+        <div class="error" id="confrimpassError"></div>
+
+        <label for="">Phone:</label>
+        <input type="text" id="phone">
+        <div class="error" id="phoneError"></div>
+
+        <button type="submit">Register</button>
+    </form>
+<script>
+    function validateForm(){
+    document.getElementById("nameError"),innerHTML = "";
+    document.getElementById("emailError"),innerHTML = "";
+    document.getElementById("passError"),innerHTML = "";
+    document.getElementById("confirmpassError"),innerHTML = "";
+    document.getElementById("phoneError"),innerHTML = "";
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("confirmpassword").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let isValid = true;
+
+    if (name ===""){
+        document.getElementById("nameError").innerHTML = "Name cannot be empty"
+        isValid = false;
+    }
+        else{
+            let namePattern = /^[A-Za-z]+$/;
+            if (!name.match(namePattern)){
+                document.getElementById("nameError").innerHTML = "Name should contain only alphabets (A-Z)";
+                isValid = false;
+            }
+        }
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("emailError").innerHTML = "Enter a valid email";
+                isValid = false;
+            }
+
+            if (password.length < 6){
+                document.getElementById("passError").innerHTML = "Passwords must be atleast 6 characters";
+                isValid = false;
+            }
+            
+            if (password !== confirmPassword){
+                document.getElementById("confirmpasserror").innerHTML = "passwords do not match"
+                isValid = false;
+            }
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phone.match(phonePattern)){
+                document.getElementById("phoneError").innerHTML = "Phone must be 10 digits";
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>

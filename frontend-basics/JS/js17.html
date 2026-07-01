@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function singleClick(){
+            document.getElementById("mouse-msg").innerHTML="Single Click detected";
+        }
+        function doubleClick(){
+            document.getElementById("mouse-msg").innerHTML="Double click detected";
+        }
+        function mouseOver(){
+            document.getElementById("mouse-msg").innerHTML="Mouse Over Element";
+
+        }
+        function mouseOut(){
+            document.getElementById("mouse-msg").innerHTML="Mouse Left Element";
+
+        }
+        function mouseMove(){
+            document.getElementById("mouse-msg").innerHTML="Mouse is MOving";
+        }
+
+
+    </script></head>
+<body>
+    <h2>MOuse based events</h2>
+
+    <div style="width: 300px; height: 150px; background: #f0f0f0; border:2px solid black"
+                                onclick="singleClick()"
+                                ondblclick="doubleClick()"
+                                onmouseover="mouseOver()"
+                                onmouseout="mouseOut()"
+                                onmousemove="mouseMove()">
+                            <p>
+                                Move / Click Inside The Box
+                            </p>
+                            </div>
+        <p id="mouse-msg" style="color:blue; font-weight: bold;"></p>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function keydownEvent(){
+            document.getElementById("key-status").innerHTML="Key Down";
+        }
+        function keyupEvent(){
+            document.getElementById("key-status").innerHTML="Key Up";
+        }
+        function keyPressEvent(event){
+            document.getElementById("key-char").innerHTML="You Pressed: "+ event.key;
+        }
+    </script>
+</head>
+<body>
+    <h2>Keyboard Based Events</h2>
+    <input type="text" 
+                    onkeydown="keydownEvent()"
+                    onkeyup="keyupEvent()"
+                    onkeypress="keyPressEvent(event)"
+                    placeholder ="Press Any Key">
+    <p id="key-status" style="color: green; font-weight: bold;"></p>
+    <p id="key-char" style="color: red; font-weight: bold;"></p>
+</body>
+</html>

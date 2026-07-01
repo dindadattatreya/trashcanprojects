@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function focusField(){
+            document.getElementById("msg").innerHTML="Input field selected";
+        }
+        function blurField(){
+            document.getElementById("msg").innerHTML = "You left the input field!";
+        }
+        function valueChanged(){
+            document.getElementById("msg").innerHTML = "Value Changed!";
+        }
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById("msg").innerHTML= "Form Submitted successfully";
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="submitForm(event)">
+<input type="text"
+    onfocus="focusField()"
+    onblur="blurField()"
+    onchange="valueChanged"
+    placeholder="Type SOmething">
+    <br><br>
+    <button type="submit">Submit</button>
+
+    </form>    
+    <p id="msg" ></p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "Sahiba",
+            age: 25,
+            city: "Jalandhar"
+        };
+        console.log("1.Object created")
+        console.log(person);
+
+        console.log("\n 2.Accessing properties");
+        console.log("Name:", person.name);
+        console.log("City:", person["city"]);
+
+        person.country = "India";
+        console.log("\n After Adding property 'country':", person);
+
+        person.age = 26;
+        console.log("\n 4. After updating 'age':", person);
+
+        delete person.city;
+        console.log("\n after deleting 'city':", person);
+
+        let student = {
+            name: "Shruti",
+            marks: 90,
+            displayInfo: function() {
+                return this.name + " scored " + this.marks + "marks.";
+            }
+        }
+
+        console.log("\n 6. Object with method: ");
+        console.log(student.displayInfo());
+
+        let employee = {
+            name: "Priya",
+            department: {
+                name: "IT",
+                location: "Building 3"
+            }
+        };
+
+
+        console.log("\n 7.Nested object:");
+        console.log("Department name:", employee.department.name);
+        console.log("Department location: ", employee.department.location);
+
+        console.log("\n Looping through an object properties");
+        for (let key in person){
+            console.log(key + ": " + person[key]);
+            console.log(key + ": " + person[key]);                
+            
+        }
+    </script>
+    
+</body>
+</html>

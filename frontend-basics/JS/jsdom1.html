@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="demo">paragraph 1</p>
+    <p class="demo">paragraph 2</p>
+    <p class="demo">paragraph 3</p>
+    <button onclick="demoName()">change by class name</button>
+    <button onclick="queryChange()">Query Selector</button>
+        <h4>HELLO World</h4>
+        <button onclick="remfardeen()">REMOVE FARDEEN</button>
+    <h1 id="heading1">DOCUMENT OBJECT MODEL</h1>
+    <button onclick="styleHead()">do heading styling</button>
+
+    <p id="change">hello, this is a class in k25er</p>
+    <button onclick="change()">Change by id</button>
+
+    <script>
+        function demoName(){
+            let data=document.getElementsByClassName("demo");
+            for (let i=0;i<data.length;i++){
+                data[i].innerHTML="CHANGED CONTENT BY CLASS NAME";
+            }
+        }
+        function queryChange(){
+            document.querySelector(".demo").innerHTML = "Content Changed By Query Selector Using Class Name"
+        }
+        function styleHead(){
+            const h=document.getElementById("heading1");
+            h.style.color="red";
+        }
+        function change(){
+        document.getElementById("change").innerHTML="THIS IS A CLASS IN K25EP";}
+
+        function remfardeen(){
+        document.getElementsByTagName("h4").innerHTML="remove remove fardeen";}
+    </script>
+</body>
+</html>

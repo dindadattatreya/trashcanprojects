@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        .highlight {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <!-- Paragraphs will be added here -->
+    </div>
+
+    <ul id="mylist">
+        <li id="item1">Item 1</li>
+        <li id="item2">Item 2</li>
+        <li id="item3">Item 3</li>
+    </ul>
+
+    <hr>
+
+    <button onclick="remov()">Remove Div</button>
+    <button onclick="addbegin()">Add Item at Beginning</button>
+    <button onclick="addItem()">Add Item at End</button>
+    <button onclick="addPara()">Add Paragraph to Div</button>
+    <button onclick="removItem()">Remove Item 2</button>
+    <button onclick="addclss()">Add Highlight Class</button>
+    <button onclick="removclss()">Remove Highlight Class</button>
+
+    <br><br>
+
+    <a id="mylink" href="https://www.example.com">Go to the website</a>
+    <button onclick="getlnk()">Get Link href</button>
+    <p id="link"></p>
+
+    <!-- This is the paragraph we will style with classList -->
+    <p id="stylpara">This paragraph will be highlighted when you click "Add Class".</p>
+
+    <script>
+        // Remove the entire div1
+        function remov() {
+            const div = document.getElementById("div1");
+            if (div) div.remove();
+        }
+
+        // Prepend a new <li> to the list (add at the beginning)
+        function addbegin() {
+            const li = document.createElement("li");
+            li.textContent = "New Item (Prepended)";
+            document.getElementById("mylist").prepend(li);
+        }
+
+        // Append a new <li> to the list (add at the end)
+        function addItem() {
+            const li = document.createElement("li");
+            li.textContent = "New Item (Appended)";
+            document.getElementById("mylist").appendChild(li);
+        }
+
+        // Add a new paragraph inside div1
+        function addPara() {
+            const para = document.createElement("p");
+            para.innerHTML = "This is a new paragraph added dynamically!";
+            document.getElementById("div1").appendChild(para);
+        }
+
+        // Remove the list item with id="item2"
+        function removItem() {
+            const list = document.getElementById("mylist");
+            const item = document.getElementById("item2");
+            if (item && list.contains(item)) {
+                list.removeChild(item);
+            }
+        }
+
+        // Add the "highlight" class to the paragraph
+        function addclss() {
+            document.getElementById("stylpara").classList.add("highlight");
+        }
+
+        // Remove the "highlight" class from the paragraph
+        function removclss() {
+            document.getElementById("stylpara").classList.remove("highlight");
+        }
+
+        // Get and display the href attribute of the link
+        function getlnk() {
+            const link = document.getElementById("mylink");
+            const value = link.getAttribute("href");
+            document.getElementById("link").textContent = "href is: " + value;
+        }
+        
+    </script>
+</body>
+</html>
