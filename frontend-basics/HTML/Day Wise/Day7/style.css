@@ -1,0 +1,58 @@
+.center100
+{
+    text-align: center;
+}
+.colorgreen
+{
+    color:rgb(104, 239, 41);
+}
+.shdow
+{
+    text-shadow: 10px 10px 10px;
+}
+.colorgray
+{
+    color: dimgray;
+}
+a
+{
+text-decoration: none;
+font-size: 22px;
+margin-right: 20px;
+color: rgb(195, 6, 135);
+font-family: 'Poppins' , sans-serif;
+font-weight: 500;
+}
+a:hover
+{
+border-bottom: 5px solid rgb(195, 6, 135);
+border-radius: 20%;
+transition: 10ms ease;
+}
+.menu-item
+{
+    margin-bottom: 15px;
+    padding:10px;
+    background-color: antiquewhite;
+}
+img
+{
+    border-radius: 50%;
+    margin-right: -20px;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 3px;
+}
+ul li:nth-child(even){
+    font-size: 24px;
+    color: rgb(195, 6, 135);
+}
+ul li:nth-child(odd){
+    font-size: 24px;
+    color: rgb(191, 123, 15);
+}
+body
+{
+    background-color: antiquewhite;
+    border-top: 25px solid rgb(195, 6, 135);
+}
