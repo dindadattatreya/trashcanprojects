@@ -23,6 +23,5 @@ If you are brave enough to dig through the folders, you'll roughly find:
 ```text
 trashcanprojects/
 ├── c-programs/          # Classic school lab assignments, logic exercises, & CLI experiments
-├── php-programming/        # Early database connections, forms, and dynamic backend attempts
 ├── frontend-basics/   # Pure HTML/CSS templates, layout practice, and vanilla JS warmth
 └── README.md            # You are here!
