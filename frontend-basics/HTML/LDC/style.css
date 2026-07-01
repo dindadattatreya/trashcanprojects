@@ -1,0 +1,180 @@
+
+
+.poppins-bold {
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .bebas-neue-light {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .imgscale{
+    
+    height: 500px; 
+    object-fit: cover;
+  }
+.poscenterimg
+{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+  
+}
+h1{
+    text-align: center;
+    color: rgb(196, 196, 235);
+}
+p{
+    color: rgb(196, 196, 235);
+}
+.pcolor2{
+    color: rgb(237, 163, 15)
+}
+h2{
+    color: rgb(207, 244, 232);
+}
+.card
+{
+    box-shadow: 2px 2px 2px 4px rgb(143, 141, 141);
+}
+.card:hover{
+    box-shadow: 5px 5px 5px rgb(237, 163, 15);
+}
+.linkov::after {
+    content: "";
+    display: block;
+    background: none;
+    inset: 10;
+    transition: scale() 100ms linear 0.3s;
+}
+.nav-link{
+    border-radius: 30px;
+}
+.linkov:hover {
+    background-color: #f1bc35;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #dee422;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #dee422;
+        --bs-btn-hover-border-color: #dee422;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #dee422;
+        --bs-btn-active-border-color: #dee422;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+.nounderline{
+   text-decoration: none;
+}
+u{
+    color: rgb(237,163,15);
+}
+/* Container to hold the profile picture */
+.profile-pic{
+    width: 100px; /* Width of the profile picture */
+    height: 50px; /* Height of the profile picture */
+    
+    overflow: hidden; /* Ensures the image stays within the container */
+    border: 0px solid #333; /* Border around the image */
+    display: flex; /* To center the image */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the image inside the container */
+.profile-pic img {
+    width: 50px; /* Full width inside the container */
+    height: 50px; /* Maintains aspect ratio */
+    border-radius: 50%;
+}
+.pcenter{
+  text-align: center;
+}
+.btn:hover{
+box-shadow: 20px 20px 20px;
+}
