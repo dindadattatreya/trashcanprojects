@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>   
+    <script>
+        let day=prompt("enter the number")
+        day=Number(day);
+        let dayname;
+        switch(day){
+            case 1:
+            dayname="Monday"
+            break;
+            case 2:
+            dayname="Tuesday"
+            break;
+            case 3:
+            dayname="Wednesday"
+            break;
+            case 4:
+            dayname="Thursday"
+            break;
+            case 5:
+            dayname="Friday"
+            break;
+            case 6:
+            dayname="Saturday"
+            break;
+            case 7:
+            dayname="sunday"
+            break;
+            default:
+            dayname="Invalid day number"   
+            break; 
+        }
+        document.getElementById("demo").innerHTML=dayname;
+    </script> 
+</body>
+</html>

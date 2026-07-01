@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center><u>Registration Form</u></center></h1>
+    <form action="submit.php" method="get">
+        Name:
+        <input type="text" name="" id=""><br><br>
+        Age:
+        <input type="number" name="" id=""><br><br>
+        Address:
+        <textarea name="address" id=""></textarea>
+        <p>Gender:</p>
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female
+  <input type="radio" name="gender" value="Others">Others
+
+  <p>Subject Preference:</p>
+  <input type="checkbox" name="subject" value="sub1">Hindi
+  <input type="checkbox" name="subject" value="sub2">English
+  <input type="checkbox" name="subject" value="sub3">Physics
+  <input type="checkbox" name="subject" value="sub4">Chemistry
+  <input type="checkbox" name="subject" value="sub5">Maths
+  <p>Interested in Domain:
+  <select name="domains" id="" multiple>
+  <option value="engineering">Engineering</option>
+  <option value="medical">Medical</option>
+  <option value="law">Law</option>
+ <option value="management">Management</option></select><br>
+
+<br>
+ <label for="file">Upload your picture:</label>
+  <input type="file" name="myfile" id="file">
+  <br>
+  <button type="submit"><center>Register</center></button>
+    </form>
+</body>
+</html>

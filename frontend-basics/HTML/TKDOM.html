@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello</p>
+    <p class="demo1">Hello1</p>
+    <p class="demo1">Hello2</p>
+    <p class="demo1">Hello3</p>
+    <p class="demo3">Hello2</p>
+    <p class="demo3">Hello3</p>
+    <script>
+        let para=document.getElementById("demo")
+        para.innerText="<b>the content is now changed</b>"
+        let para2=document.getElementsByClassName("demo1")
+        for(let i=0; i<para2.length;i++){
+        para2[i].style.color="red"
+        }
+        let para3=document.querySelectorAll(".demo3")
+        for(let j=0;j<para3.length;j++){
+        para3[j].style.color="green"
+        }
+        let image=document.createElement("img")
+        image.setAttribute("src","Logo.png")
+        image.setAttribute("width","100px")
+        
+        document.body.appendChild(image)
+        image.setAttribute("id","imageee")
+        let source=image.getAttribute("id")
+        console.log(source)
+        let newpara=document.createElement("p")
+        newpara.innerText="this is my new para"
+        document.body.appendChild(newpara)
+        newpara.remove()
+        console.log(document.links)
+    </script>
+</body>
+</html>

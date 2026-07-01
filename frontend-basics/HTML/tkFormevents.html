@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="myFunction()">
+        <label for="username">Enter your name</label><br>
+        <input type="text" onfocus="myFunction1(this)" onchange="myFunction2(this)"><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function myFunction(){
+            alert("your form is submitted")
+        }
+         function myFunction1(is){
+            is.style.background="green"
+        }
+         function myFunction2(element){
+            alert("you changed the value and value is"+" "+ element.value )
+        }
+    </script>
+</body>
+</html>

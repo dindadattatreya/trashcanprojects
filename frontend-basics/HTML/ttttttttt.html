@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid_container{
+            display: grid;
+            background-color: aqua;
+            padding: 20px;
+            
+            grid-template-areas: "header header" "navigation navigation" "sidebar maincontent" "footer footer";
+        }
+        .items{
+            border: 2px solid black;
+            background-color: pink;
+            padding: 20px;
+        }
+        #first1{
+            grid-area: header;
+        }
+        #first2{
+            grid-area: navigation;
+        }
+        #first3{
+            grid-area: sidebar;
+        }
+        #first4{
+            grid-area: maincontent;
+        }
+        #first5{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid_container">
+        <div class="items" id="first1">1</div>
+        <div class="items" id="first2">2</div>
+
+        <div class="items" id="first3">3</div>
+
+        <div class="items" id="first4">4</div>
+        <div class="items" id="first5">5</div>
+</div>
+</body>
+</html>

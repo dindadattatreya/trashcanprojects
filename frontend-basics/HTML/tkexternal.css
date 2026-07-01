@@ -1,0 +1,37 @@
+body{
+            margin: 0px;
+        }
+        #header{
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .navigation{
+            padding: 10px;
+            background-color:green;
+            text-align: center;
+        }
+        .main{
+            display: flex;
+        }
+        .sidebar{
+            text-align: center;
+            padding: 15px;
+            width: 30%;
+            background-color: lightcoral;
+        }
+        .maincontent{
+            width: 70%;
+            padding: 15px;
+            background-color: lightpink;
+            text-align: center;
+        }
+        .footer{
+            padding: 20px;
+            background-color: lightskyblue;
+            text-align: center;
+        }
+        a{
+            margin: 20px;
+            text-decoration: none ;
+        }

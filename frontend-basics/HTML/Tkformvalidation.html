@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return myFunction()">
+        <label for="username">Enter your username</label><br>
+        <input type="text" id="name"><br>
+        <label for="password">Enter your password</label><br>
+        <input type="password" id="password"><br>
+        <label for="email">Enter your email</label><br>
+        <input type="email" id="email"><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function myFunction(){
+            let name=document.getElementById("name").value
+            let email=document.getElementById("email").value
+            let password=document.getElementById("password").value
+            let namePattern = /^[A-Za-z ]+$/
+            if(name===""){
+                alert("Please enter your name")
+                return false;
+            }
+            if(!name.match(namePattern)){
+                alert("it contains only letters")
+                return false;
+            }
+            if(email===""){
+                alert("Please enter your email")
+                return false;
+            }
+            if(password.length<6){
+                alert("Please enter the password greater then 6 characters")
+                return false;
+            }
+            alert("your form is submitted")
+            return true
+        }
+    </script>
+</body>
+</html>

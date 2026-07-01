@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p>hello1</p>
+        <p>hello2</p>
+        <p>hello3</p>
+        <p>hello4</p>
+    </div>
+    <script>
+        let newpara=document.createElement("p")
+        newpara.textContent="this should be put in the top"
+        document.getElementById("parent").prepend(newpara)
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let i=Math.random()
+        let Text="The number is less than 0.5"
+        if(i>0.5){
+            Text="The number is greater than 0.5"
+        }
+        document.getElementById("demo").innerHTML=Text +"<br>"+ i;
+    </script>
+</body>
+</html>
