@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEO Dev Community</title>
+    <!-- externalcss -->
+    <link href="style.css" rel="stylesheet">
+    <!-- internalcss -->
+    <style>
+    body { padding-top: 70px;
+         padding-left: 30px; 
+         padding-right: 30px;
+        }
+    </style>
+    <!-- leoico -->
+    <link rel="icon" type="image/png" href="./L E O.png">
+    <!-- bootstrapcss -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- fontawesomever4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-dark">
+    
+    <!-- navbar -->
+<div>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary navbar-dark bg-dark roboto-mono">
+        <div class="container-fluid">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="./L E O.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top ">
+                    LEO Dev Community
+                  </a>
+                </div>
+              </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active linkov" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active linkov" href="#link">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active linkov" href="#downloads">Downloads</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  References
+                </a>
+                <ul class="dropdown-menu bg-secondary">
+                  <li><a class="dropdown-item" href="#">PHP</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">C++</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Python</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Java</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">HTML5 - CSS</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">C</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+                
+                <button onclick="myFunction()" class=" btn btn-outline-light p-2 me-2"><i class="fa fa-sun-o" aria-hidden="true"></i>
+                </button>
+              <input class="form-control me-2 bg-dark text-white" type="search" placeholder="Get Started" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              <div class="profile-pic">
+                <a href="./login/login.html">
+                  <img src="user.jpeg" alt="Profile Picture">
+                  </a>
+                
+                
+                </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <hr class="bg-light">
+      
+</div>
+<h3 style="color: white;" class="poppins-bold tagline-text"><em><center>Perfect place for coders</center></em> </h3>
+<img src="downloadapp.png" alt="" class="imgscale poscenterimg">
+<hr class="bg-light">
+
+<section id="home">
+<h1 class="bebas-neue-regular">Home</h1><br>
+<p class="poppins-bold" style="font-weight: 200;">
+    <span style="color: rgb(237, 175, 32);">Leo Dev Community</span> is a vibrant, coding-focused platform designed to bring together developers of all skill levels to learn, collaborate, and grow. At its core, Leo Dev Community thrives on the shared passion for technology, coding, and innovation, making it the perfect space for anyone eager to dive deeper into the world of software development. From beginners taking their first steps in coding to seasoned professionals looking to refine their skills, Leo Dev Community offers a supportive and dynamic environment that fosters continuous learning.
+</p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col p-5 mt-0">
+      <div class="card h-100 bg-dark">
+        <img src="user.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center;">Anirudh Ravichander</h2>
+          <p class="card-text pcolor2 pcenter">Working at Google, Admin</p>
+        </div>
+      </div>
+    </div>
+    <div class="col p-5 mt-0">
+      <div class="card h-100 bg-dark">
+        <img src="user.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title"style="text-align: center;">Sambit Pal</h2>
+          <p class="card-text pcolor2 pcenter">Working at Meta, Founder</p>
+        </div>
+      </div>
+    </div>
+    <div class="col p-5 mt-0">
+      <div class="card h-100 bg-dark">
+        <img src="user.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center;">Aritra Sen</h2>
+          <p class="card-text pcolor2 pcenter">Student at TIU, Co-founder</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <hr class="bg-light">
+  <div>
+  <section id="link" style="padding-top: 100px; padding-bottom: 40px;">
+
+<i><h1>Documentation for Web developers</h1></i>
+
+
+<i><h1>Web technology references</h1></i>
+<p style="padding-left: 50px; padding-right: 50px;">The open Web presents incredible opportunities for developers. To take full advantage of these technologies, you need to know how to use them. Below you'll find links to our <i><b><span class="bebas-neue-regular text-white">Web technology documentation</span></b></i>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ratione sapiente eos vero dolorem impedit possimus harum consequuntur laudantium, culpa eaque quos nesciunt voluptatem voluptatum enim voluptates laborum fugit quod. Voluptatibus illum quibusdam architecto id, distinctio tenetur iusto sit deleniti consectetur veritatis eos qui? Quasi quibusdam nam, harum veritatis ipsum eligendi. Quo explicabo nostrum ipsa nemo id. Neque consectetur perspiciatis ipsum quidem fuga veniam magni optio facilis rem porro laudantium expedita, quod pariatur corrupti iusto dolore inventore nemo accusantium quaerat ad blanditiis repellendus quos hic fugit. Veritatis, libero nam. Illo mollitia maxime aliquid quasi ipsum, soluta aperiam delectus sed ipsa obcaecati rem consectetur explicabo illum iusto dignissimos quos nihil libero tempore! Nesciunt cumque illo dolorem debitis, odit <a href="" class="nounderline"><b>ipsam ad <i class="fa fa-external-link" aria-hidden="true"></i>
+</b></a> aliquid accusamus dignissimos libero atque quae sapiente perspiciatis modi minus velit cum, tempora iure impedit eius? Sed saepe amet magni voluptatum? Laboriosam veniam soluta facere nulla atque minima sapiente modi expedita. Dicta eos possimus sint perferendis pariatur ipsum dolores vero nisi natus voluptates ab in voluptate, quia laborum exercitationem enim ea voluptas repellat eum iure deserunt? <br><br><u>Rem earum</u> consectetur ducimus perspiciatis asperiores a repudiandae cumque magni, voluptatibus minima officiis optio iure magnam. Magni perferendis illo sit quaerat perspiciatis cumque voluptas vel molestiae dolore illum praesentium, rem quos reiciendis, explicabo aspernatur dolores veniam expedita error eum provident blanditiis autem minima aliquam doloremque! Molestias earum deleniti magnam porro sed excepturi error facilis distinctio officia fugit perferendis enim eligendi numquam dolorum repudiandae adipisci maxime laudantium aspernatur sunt dolore repellendus veritatis, corporis eos iste. Perferendis assumenda dolores facilis, suscipit accusantium ad minus quidem culpa voluptas deserunt dicta mollitia fuga repudiandae, eligendi ullam corrupti voluptatem doloribus! Repudiandae ut, similique tempora quibusdam dicta, sapiente reprehenderit qui harum atque, corrupti explicabo voluptatibus? Deserunt fugit eveniet velit consectetur, odit nostrum excepturi enim asperiores aperiam nulla vero at deleniti ipsam dolorum dolores odio nemo possimus aut molestiae ducimus dolore consequatur consequuntur in exercitationem. Nostrum quibusdam minus perspiciatis facere consequuntur aliquid corrupti autem eaque accusantium enim? Sunt amet blanditiis ratione molestiae architecto rerum itaque, doloribus laboriosam porro velit sit distinctio exercitationem repellat quasi iure, quae dolor enim earum nam! Porro sunt nostrum tempore doloribus molestiae magni rerum maiores! Autem, corrupti eaque? Aperiam, quo accusamus? Pariatur recusandae natus ratione adipisci a quas accusamus quae corporis voluptatem excepturi labore molestias dolorum autem, voluptate porro alias perspiciatis soluta voluptatum sint quia consequatur tempora, quisquam repudiandae? Molestiae ab est iure velit fuga esse voluptates odio atque quia veniam earum nulla autem, quidem suscipit accusantium, nesciunt dicta omnis ex, itaque odit! Voluptatum repudiandae maxime qui praesentium! Amet perferendis explicabo neque totam. Nulla nesciunt quae cumque non, magni accusamus pariatur dolor maxime numquam repellat asperiores omnis velit odit, soluta minus consectetur officiis suscipit culpa iure impedit ratione aliquam, eius ullam reprehenderit. Reprehenderit temporibus ullam et odit quaerat quae ab, dolor doloremque, nostrum repellendus saepe aliquid recusandae repellat itaque eveniet atque vel, velit molestias illum. Ipsam nobis magnam repellat repudiandae debitis, distinctio aut tenetur molestias possimus praesentium laborum quo nemo ipsum eum, alias amet? Veniam!</p>
+</section>
+<hr class="bg-light">
+</div>
+
+<div>
+<section id="downloads">
+  <h1><i>Downloads</i></h1>
+  <table class="table table-dark table-hover text-white pcenter">
+    <tr>
+      <th class="bebas-neue-light pcolor2">N a m e</th>
+      <th class="bebas-neue-light pcolor2">V e r s i o n</th>
+      <th class="pcolor2">Link</th>
+    </tr>
+    <tbody class="table-group-divider">
+
+    <tr>
+      <th>Visual Studio Code</th>
+      <th>1.93</th>
+      <th><a href="https://code.visualstudio.com/" class="nounderline roboto-mono">https://code.visualstudio.com/</a></th>
+    </tr>
+    <tr>
+      <th>Intellij IDEA</th>
+      <th>2024.2.3</th>
+      <th><a href="https://www.jetbrains.com/idea/" class="nounderline roboto-mono">https://www.jetbrains.com/idea/</a></th>
+    </tr>
+    <tr>
+      <th>Code::Blocks</th>
+      <th>N/A</th>
+      <th><a href="https://www.codeblocks.org/downloads/" class="nounderline roboto-mono">https://www.codeblocks.org/downloads/</a></th>
+    </tr>
+    <tr>
+      <th>Notepad++</th>
+      <th>v8.6.7</th>
+      <th><a href="https://notepad-plus-plus.org/downloads/v8.6.7/" class="nounderline roboto-mono">https://notepad-plus-plus.org/downloads/v8.6.7/</a></th>
+    </tr>
+    <tr>
+      <th>PyCharm</th>
+      <th>2024.2.3</th>
+      <th><a href="https://www.jetbrains.com/pycharm/" class="nounderline roboto-mono">https://www.jetbrains.com/pycharm/</a></th>
+    </tr>
+    <tr>
+      <th>Turbo-C</th>
+      <th>N/A</th>
+      <th><a href="https://turbo-c.net/turbo-c-download/" class="nounderline roboto-mono">https://turbo-c.net/turbo-c-download/<span style="color: tomato;"><i class="fa fa-exclamation-triangle" aria-hidden="true">Deprecated</i></span>
+      </a></th>
+    </tr>
+
+  </table>
+</section>
+
+</div>
+<!-- footer -->
+
+        
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <p class="col-md-4 mb-0 text-body-secondary">&copy; LDC, 2024</p>
+  
+      <img src="./L E O.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top ">
+
+  
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fa fa-reddit-alien" aria-hidden="true"></i>
+        </a></li>
+      </ul>
+      
+    </footer>
+  </div>
+    
+    <!-- bootstrapjs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- lightmode -->
+     <script>
+          function myFunction() {
+            // jscodeofdarkmodefunc
+        }
+     </script>
+   
+</body>
+</html>
