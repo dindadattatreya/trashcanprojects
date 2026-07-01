@@ -9,13 +9,13 @@ Welcome to my personal digital junkyard and time capsule! This repository serves
 
 ---
 
-## 🛠️ The Origin Story & Tech Stack
+## The Origin Story & Tech Stack
 This was a time of pure exploration, trial-by-error, and zero guidelines. The ecosystem here is built entirely out of:
 * **Frontend Fundamentals:** `HTML5`, `CSS3`, `JavaScript` (the raw, un-frameworked kind)
 * **The Backend Backbone:** `PHP` (classic procedural scripts, likely full of creative workarounds, but hey, it worked!)
 * **The Logic Foundation:** `C` (school lab assignments, pointer practice, and terminal-based logic games)
 
-## ⚠️ Why is this public? (Disclaimer)
+## Why is this public? (Disclaimer)
 1. **Preserving History:** I recently discovered that deleting repositories destroys your hard-earned GitHub contribution graph (the sacred green squares). This repository exists to shield those commits from the void.
 2. **The Open Source Spirit:** Who knows? Hidden deep in this pile of scrap, there might be a niche logic puzzle solution, a specific C program algorithm, or a basic PHP form script that helps a student currently sitting exactly where I was a few years ago.
 3. **Humbling Perspective:** It’s a great reminder of where everything started. 
