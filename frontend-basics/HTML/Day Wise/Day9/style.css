@@ -1,0 +1,58 @@
+:root
+{
+    --backcolor:rgb(241, 197, 149);
+    --heading1color:rgb(40, 49, 79);
+    --buttonbackprimary-color:rgb(252, 7, 7);
+    --heading2color:rgb(7, 99, 7);
+    --textcolor:rgb(215, 9, 9);
+    --paratext-size:2.5rem;
+    --text-white:white;
+
+}
+
+.b1
+{
+    background-color: var(--buttonbackprimary-color) !important;
+    color: var(--text-white) !important;
+    margin-bottom: 15px !important;
+}
+
+p
+{
+    font-size: var(--paratext-size);
+    color: var(--heading2color);
+}
+
+body
+{
+    background-color: var(--backcolor);
+}
+
+*
+{
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+
+.c1
+{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    box-shadow: 10px 10px 10px black;
+    margin-bottom: 15px;
+}
+
+.img-size
+{
+    max-height: 300px;
+}
+
+.paratext
+{
+    color: var(--textcolor);
+}
