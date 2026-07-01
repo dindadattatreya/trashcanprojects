@@ -5,7 +5,7 @@ Welcome to my trashcan! This repository is a time capsule of applications,  expe
 
 > **"One person's digital trash is another person's... well, maybe just slightly older code."**
 
-Welcome to my personal digital junkyard and time capsule! This repository serves as a permanent public archive for all the applications, experimental scripts, and raw code snippets I wrote back when I was in **11th and 12th grade (pre-college)**. 
+Welcome to my personal digital junkyard and time capsule! This repository serves as a permanent public archive for all the applications, experimental scripts, and raw code snippets I wrote back when I was in **11th, 12th grade (pre-college) and also First Year**. 
 
 ---
 
