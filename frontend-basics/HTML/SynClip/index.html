@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="what_did_i_just_read_meme_______by_fictionalomniverse_d8zyfy4-375w.jpg" type="image/x-icon">
+  <title>Synclip</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f7f7f7;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    textarea {
+      width: 90%;
+      max-width: 600px;
+      height: 200px;
+      padding: 15px;
+      border-radius: 14px;
+      border: 1px solid #ccc;
+      background: #ffffff;
+      color: #222;
+      font-size: 16px;
+      resize: none;
+      outline: none;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      background-color: #e0e0e0;
+      color: #222;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 14px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:hover {
+      background-color: #d4d4d4;
+      transform: scale(1.03);
+    }
+
+    #status {
+      margin-top: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Synclip</h1>
+  <textarea id="clipboard" placeholder="Type or paste text here..."></textarea>
+  <div class="buttons">
+    <button id="copyBtn">Copy</button>
+    <button id="pasteBtn">Paste</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+  <div id="status">Idle</div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const docRef = doc(db, "shared_clipboard", "main");
+
+    const textarea = document.getElementById("clipboard");
+    const status = document.getElementById("status");
+    const copyBtn = document.getElementById("copyBtn");
+    const pasteBtn = document.getElementById("pasteBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    let isLocalEdit = false;
+
+    // 🔁 Real-time Firestore listener
+    onSnapshot(docRef, (snap) => {
+      if (!snap.exists()) return;
+      const remote = snap.data().text || "";
+      if (!isLocalEdit && textarea.value !== remote) {
+        textarea.value = remote;
+        status.textContent = "Updated from cloud";
+      }
+      isLocalEdit = false;
+    });
+
+    // 🧠 Debounced auto-save
+    let timer;
+    textarea.addEventListener("input", () => {
+      isLocalEdit = true;
+      status.textContent = "Typing...";
+      clearTimeout(timer);
+      timer = setTimeout(async () => {
+        await setDoc(docRef, { text: textarea.value });
+        status.textContent = "Synced";
+      }, 500);
+    });
+
+    // ✅ Copy
+    copyBtn.addEventListener("click", async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textarea.value);
+        } else {
+          const temp = document.createElement("textarea");
+          temp.value = textarea.value;
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand("copy");
+          document.body.removeChild(temp);
+        }
+        status.textContent = "Copied ✅";
+      } catch (err) {
+        console.error("Copy failed:", err);
+        status.textContent = "Copy failed ❌";
+      }
+    });
+
+    // ✅ Paste (insert at cursor)
+    pasteBtn.addEventListener("click", async () => {
+      try {
+        let pasteText = "";
+        if (navigator.clipboard && window.isSecureContext) {
+          pasteText = await navigator.clipboard.readText();
+        } else {
+          pasteText = prompt("Paste your text here:");
+        }
+        if (!pasteText) return;
+
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const newValue =
+          textarea.value.substring(0, start) +
+          pasteText +
+          textarea.value.substring(end);
+
+        textarea.value = newValue;
+        textarea.selectionStart = textarea.selectionEnd = start + pasteText.length;
+        isLocalEdit = true;
+        await setDoc(docRef, { text: newValue });
+        status.textContent = "Pasted & synced ✅";
+      } catch (err) {
+        console.error("Paste failed:", err);
+        status.textContent = "Paste failed ❌";
+      }
+    });
+
+    // ✅ Clear
+    clearBtn.addEventListener("click", async () => {
+      textarea.value = "";
+      isLocalEdit = true;
+      await setDoc(docRef, { text: "" });
+      status.textContent = "Cleared";
+    });
+
+    // Load initial text
+    (async () => {
+      const snap = await getDoc(docRef);
+      if (snap.exists()) textarea.value = snap.data().text || "";
+    })();
+  </script>
+</body>
+
+</html>
