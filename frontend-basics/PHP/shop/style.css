@@ -1,0 +1,25 @@
+.logo
+{
+    height: 50px;
+    width: 50px;
+}
+.nav-color
+{
+    background-color: rgb(77, 80, 87);
+}
+.form-mar
+{
+    margin-top: 125px;
+    padding: 50px;
+}
+.form-color
+{
+    background-color:  rgb(162, 235, 162);
+    box-shadow: 5px 5px 5px black;
+    border-radius: 25px;
+}
+.form-text
+{
+    color:white !important;
+   
+}
