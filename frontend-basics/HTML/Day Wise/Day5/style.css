@@ -1,0 +1,22 @@
+.centerme
+{
+    margin: auto;
+}
+.btn-div
+{
+    text-align: center;
+    margin-top: 50px;
+}
+.my-btn
+{
+    margin: 15px;
+    min-width: 100px;
+    border-radius: 20px;
+    box-shadow:10px 10px 15px black ;
+}
+.my-btn:hover
+{
+    background-color: aliceblue;
+    color: dodgerblue;
+    box-shadow: 10px 10px 15px rgb(87,92,243);
+}
